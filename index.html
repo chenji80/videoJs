@@ -22,5 +22,15 @@
     
   </video>
   <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
+<script>
+var myPlayer = videojs('my-video', {
+                    html5: {
+                        hls: {
+                            withCredentials: true
+                        }
+                    }
+
+                });
+</script>
 </body>
 </html>
