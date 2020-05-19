@@ -7,23 +7,12 @@
     <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
 </head>
 <body>
-    <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-
-    data-setup="{}"
-  >
-    <source src="http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8" type="video/m3u8" />
-
-    
-  </video>
+    <video style="width: 100%;" controls crossorigin id="video" class="video-js">
+        <source src="" type="application/x-mpegURL">
+    </video>
   <script src="https://vjs.zencdn.net/7.7.6/video.js"></script>
 <script>
-var myPlayer = videojs('my-video', {
+var myPlayer = videojs('video', {
                     html5: {
                         hls: {
                             withCredentials: true
@@ -31,6 +20,8 @@ var myPlayer = videojs('my-video', {
                     }
 
                 });
+    myPlayer.src("http://ivi.bupt.edu.cn/hls/cctv1hd.m3u8")
+    myPlayer.play()
 </script>
 </body>
 </html>
